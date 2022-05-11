@@ -18,11 +18,11 @@
 		<div class="sequencer">
 			<div class="kick-track">
 				<div class="controls">
-					<h1>Kick</h1>
+					<h1 class="controls__header">Kick</h1>
 					<button data-track="0" class="mute kick-volume">
 						<i class="fa-solid fa-volume-xmark"></i>
 					</button>
-					<select name="kick-select" id="kick-select">
+					<select class="controls__select" name="kick-select" id="kick-select">
 						<option value="/sounds/kick-classic.wav">Classic kick</option>
 						<option value="/sounds/kick-808.wav">808 kick</option>
 						<option value="/sounds/kick-heavy.wav">Heavy kick</option>
@@ -41,11 +41,11 @@
 			</div>
 			<div class="snare-track">
 				<div class="controls">
-					<h1>Snare</h1>
+					<h1 class="controls__header">Snare</h1>
 					<button data-track="1" class="mute snare-volume">
 						<i class="fa-solid fa-volume-xmark"></i>
 					</button>
-					<select name="snare-select" id="snare-select">
+					<select class="controls__select" name="snare-select" id="snare-select">
 						<option value="/sounds/snare-acoustic01.wav">Classic snare</option>
 						<option value="/sounds/snare-808.wav">808 snare</option>
 						<option value="/sounds/snare-vinyl02.wav">Snare vinyl</option>
@@ -64,16 +64,16 @@
 			</div>
 			<div class="hihat-track">
 				<div class="controls">
-					<h1>Hihat</h1>
+					<h1 class="controls__header">Hihat</h1>
 					<button data-track="2" class="mute hihat-volume">
 						<i class="fa-solid fa-volume-xmark"></i>
 					</button>
-					<select name="hihat-select" id="hihat-select">
+					<select class="controls__select" name="hihat-select" id="hihat-select">
 						<option value="/sounds/hihat-acoustic01.wav">Hihat acoustic</option>
 						<option value="/sounds/hihat-808.wav">808 hihat</option>
 					</select>
 				</div>
-				<div class="snare">
+				<div class="hihat">
 					<div class="pad hihat-pad b0"></div>
 					<div class="pad hihat-pad b1"></div>
 					<div class="pad hihat-pad b2"></div>
@@ -84,8 +84,9 @@
 					<div class="pad hihat-pad b7"></div>
 				</div>
 			</div>
+			<button class="play">Play</button>
 		</div>
-		<button class="play">Play</button>
+		
 		<audio class="kick-sound" src="/sounds/kick-classic.wav"></audio>
 		<audio class="kick-sound" src="/sounds/snare-acoustic01.wav"></audio>
 		<audio class="kick-sound" src="/sounds/hihat-acoustic01.wav></audio>
