@@ -30,13 +30,13 @@ svg {
 	background-color: rgb(197, 74, 221);
 }
 .kick-pad.active {
-	background-color: rgb(0, 255, 234);
+	background-color: rgb(0 97 89);
 }
 .snare-pad.active {
-	background-color: rgb(61, 240, 61);
+	background-color: rgb(0 152 0);
 }
 .hihat-pad.active {
-	background-color: rgb(206, 30, 241);
+	background-color: rgb(103 8 122);
 }
 
 .sequencer {
