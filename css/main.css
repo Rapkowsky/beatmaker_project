@@ -62,7 +62,9 @@ svg {
 .hihat {
 	display: flex;
 }
-
+button {
+	border-radius: 8px;
+}
 .controls {
 	display: flex;
 	justify-content: space-between;
@@ -76,6 +78,7 @@ svg {
 }
 .controls__select {
 	min-width: 160px;
+	border-radius: 8px;
 }
 .controls button {
 	padding: 1rem;
@@ -87,8 +90,15 @@ svg {
 	transition: all 0.5s ease;
 }
 
-.pad {
+.pad,
+.play {
 	transition: all 0.5s ease;
+	border-radius: 8px;
+}
+.mute:hover,
+.pad:hover,
+.play:hover {
+	transform: scale(1.1);
 }
 
 .play {
@@ -100,6 +110,10 @@ svg {
 	cursor: pointer;
 	margin-top: 3rem;
 }
+
+.mute.active {
+	background-color: #dc143c;
+}
 select {
 	padding: 1rem;
 	font-size: 1rem;
@@ -108,7 +122,8 @@ select {
 @keyframes playTrack {
 	from {
 		transform: scale(1);
-	}to{
+	}
+	to {
 		transform: scale(1.2);
 	}
 }
