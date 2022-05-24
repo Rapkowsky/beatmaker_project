@@ -9,10 +9,12 @@ class DrumKit {
 		this.currentSnare = "/sounds/snare-acoustic01.wav";
 		this.currentHihat = "/sounds/hihat-acoustic01.wav";
 		this.index = 0;
-		this.bpm = 150;
+		this.bpm = 500;
 		this.isPlaying = null;
 		this.selects = document.querySelectorAll("select");
 		this.muteBtns = document.querySelectorAll(".mute");
+		this.tempoSlider = document.querySelector(".tempo-slider");
+		this.tempoText = document.querySelector(".tempo-number");
 	}
 	activePad() {
 		this.classList.toggle("active");
@@ -111,6 +113,17 @@ class DrumKit {
 			}
 		}
 	}
+	changeTempo(e) {
+		this.bpm = e.target.value;
+		this.tempoText.innerText = e.target.value;
+	}
+	updateTempo() {
+		clearInterval(this.isPlaying);
+		this.isPlaying = null;
+		if (this.playBtn.classList.contains("active")) {
+			this.start();
+		}
+	}
 }
 
 const drumKit = new DrumKit();
@@ -137,4 +150,12 @@ drumKit.muteBtns.forEach((btn) => {
 	btn.addEventListener("click", function (e) {
 		drumKit.mute(e);
 	});
+});
+
+drumKit.tempoSlider.addEventListener("input", function (e) {
+	drumKit.changeTempo(e);
+});
+
+drumKit.tempoSlider.addEventListener("change", function (e) {
+	drumKit.updateTempo(e);
 });
